@@ -19,3 +19,5 @@ disabled = true
 
 [python]
 format="(\\\($virtualenv\\\) )"' > ~/.config/starship.toml
+
+source ~/.zshrc
