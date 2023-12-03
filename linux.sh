@@ -5,7 +5,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 echo 'eval "$(starship init zsh)"
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions)' > ~/.zshrc
 
 echo 'add_newline = false
 format = "$python$directory$character"
