@@ -1,5 +1,6 @@
 sudo apt install zsh unzip -y
 curl -sS https://webi.sh/lsd | sh
+cp ~/.local/bin/lsd /bin/lsd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions
 curl -s https://ohmyposh.dev/install.sh | bash -s
