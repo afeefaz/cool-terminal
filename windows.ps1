@@ -1,21 +1,7 @@
 Install-Module PSReadLine
-winget install --id Starship.Starship
+winget install JanDeDobbeleer.OhMyPosh -s winget
 
-$exp = "Invoke-Expression (&starship init powershell)
+$exp = "oh-my-posh init pwsh --config 'C:\Users\spay_\Documents\powerlevel10k_rainbow.omp.json' | Invoke-Expression
 Set-PSReadLineOption -PredictionSource History"
 
-$exp | Out-File ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-
-New-Item -ItemType Directory -Force ~/.config;
-New-Item -ItemType file -Force ~/.config/starship.toml;
-
-$starship = 'add_newline = false
-format = "$python$directory$character"
-[character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
-[package]
-disabled = true
-[python]
-format="(($virtualenv) )"'
-$starship | Out-File -Encoding utf8 ~/.config/starship.toml
+$exp | Out-File -Encoding utf8 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
