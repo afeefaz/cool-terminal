@@ -1,9 +1,14 @@
 sudo apt install zsh unzip -y
 curl -sS https://webi.sh/lsd | sh
-cp ~/.local/bin/lsd /bin/lsd
+sudo cp ~/.local/bin/lsd /bin/lsd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions
-curl -s https://ohmyposh.dev/install.sh | bash -s
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d .
+sudo mv oh-my-posh /usr/bin/oh-my-posh
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaCode.zip
+unzip CascadiaCode.zip
+sudo mv *.ttf /usr/share/fonts/
+fc-cache -fv
 
 echo 'export ZSH="$HOME/.oh-my-zsh"
 HISTFILE=$ZSH/.zsh_history
